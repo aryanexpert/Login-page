@@ -1,1 +1,15 @@
+<h2>Registered Users</h2>
+<ul id="list"></ul>
+
+<script>
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const list = document.getElementById("list");
+
+  users.forEach(user => {
+    const li = document.createElement("li");
+    li.innerText = user.email;
+    list.appendChild(li);
+  });
+</script>
+
 
